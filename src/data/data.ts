@@ -293,10 +293,26 @@ export const data = {
     ],
     contactsTitle: 'Contact',
     contactsList: [
-      { image: '', link: '', name: 'aselAl86' },
-      { image: '', link: '', name: 'asel.alimbaeva.kk@gmail.com' },
-      { image: '', link: '', name: 'alimbaeva' },
-      { image: '', link: '', name: 'asel.alimbaeva' },
+      {
+        image: 'telegram>',
+        link: 'https://t.me/aselAl86',
+        name: 'aselAl86',
+      },
+      {
+        image: 'mail_emal>',
+        link: '',
+        name: 'asel.alimbaeva.kk@gmail.com',
+      },
+      {
+        image: 'GITHUB>',
+        link: 'https://github.com/alimbaeva',
+        name: 'alimbaeva',
+      },
+      {
+        image: 'discord>',
+        link: 'https://discord.com/asel.alimbaeva#4817',
+        name: 'asel.alimbaeva',
+      },
     ],
   },
   ru: {

@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { Rezume } from './rezume/Rezume';
 
-function App() {
-  return <div className="App"></div>;
-}
+const App: FC = () => {
+  return (
+    <div className="App">
+      <Rezume />
+    </div>
+  );
+};
 
 export default App;

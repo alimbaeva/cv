@@ -1,0 +1,24 @@
+.skills-block {
+    .image {
+        width: 320px;
+        height: 284px;
+        background-image: url('../../assets/meImage.jpg');
+        background-size: no-repeat;
+        background-size: cover;
+    }
+
+    .contact {
+        img {
+            width: 20px;
+            margin-right: 10px;
+            color: rgb(206, 106, 106);
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+}
+
