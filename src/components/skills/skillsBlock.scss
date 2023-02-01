@@ -1,10 +1,49 @@
+@import '../../main_style.scss';
+
 .skills-block {
+    width: 320px;
+    padding: 1rem;
+    background-color: $primary-color;
+    color: $background;
+    position: absolute;
+    top: 0;
+    left: 0;
     .image {
-        width: 320px;
-        height: 284px;
+        width: 285px;
+        height: 250px;
+        margin-top: 76px;
+        margin-bottom: 1rem;
         background-image: url('../../assets/meImage.jpg');
         background-size: no-repeat;
         background-size: cover;
+    }
+
+    .skills-block__text {
+        h2 {
+            margin: .7rem 0;
+        }
+
+        li {
+            margin-bottom: .4rem;
+            animation: 3s 1 normal skills-animation;
+        }
+
+        @keyframes skills-animation {
+            from {
+                opacity: 0;
+                transform: translateX(50%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+          }
+
+        li:hover {
+            font-size: 1.06rem;
+            transform: translateX(5%);
+            transition: 1s;
+        }
     }
 
     .contact {
@@ -15,9 +54,16 @@
         }
 
         a {
-            display: flex;
-            align-items: center;
+            color: $background;
+            @extend %display-flex;
+            justify-content: flex-start;
             text-decoration: none;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: $background;
+            }
         }
     }
 }
