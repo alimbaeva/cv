@@ -9,8 +9,8 @@ export const Rezume: FC = () => {
     <div className="container">
       <Header />
       <Skills />
-      {/* <Main />
-      <Footer /> */}
+      {/* <Main /> */}
+      <Footer />
     </div>
   );
 };
