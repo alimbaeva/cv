@@ -1,0 +1,138 @@
+@import '../../main_style.scss';
+
+.portfolio-slides {
+    margin-top: 1rem;
+
+    .portfolio-slide_item {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .portfolio-slide_img {
+        width: 100%;
+        height: 387px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 387px;
+        }
+    }
+
+    .portfolio-slide_img::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #464242;
+        position: absolute;
+        opacity: .4;
+    }
+
+    .portfolio-slide_texts {
+        width: 25%;
+        height: 100%;
+        padding: .6rem;
+        color: $background;
+        background-color: $primary-color;
+        position: absolute;
+        top: 0;
+        left: 10%;
+
+        h6 {
+            padding-bottom: 5px;
+            display: inline-block;
+            margin: 1.2rem 0 3rem;
+            font-size: 1rem;
+            border-bottom: 2px solid $background;
+        }
+        
+        h6~p {
+            color: $background;
+            font-size: .8rem;
+        }
+
+        .portfolio-slide_info {
+            p {
+                color: $background;
+                font-size: .8rem;
+            }
+            ul {
+                padding-left: 1rem;
+            }
+            li {
+                margin-right: 8px;
+                display: inline-block;
+                list-style: none;
+            }
+        }
+        button {
+            width: 153px;
+            height: 30px;
+            margin: 4rem 0 0 1rem;
+            border: none;
+            border-radius: 20px;
+            background-color: $background;
+            font-weight: 700;
+            color: $primary-color;
+            cursor: pointer;
+        }
+        button:hover {
+            box-shadow: inset 0px 0px 10px 3px $primary-color;
+        }
+    }
+
+    .portfolio-slide_item:hover .portfolio-slide_texts>button {
+        height: 38px;
+        transition: .5s;
+    }
+
+    .portfolio-slides_btns {
+        margin-top: 1rem;
+        margin-left: 77%;
+        button {
+            width: 80px;
+            height: 30px;
+            margin-left: 1rem;
+            background-color: $background;
+            border: 1px solid $primary-color;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+
+            svg {
+                width: 15px;
+                height: 15px;
+                fill: $primary-color;
+                position: absolute;
+                z-index: 1;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        button::before {
+            content: "";
+            width: 0%;
+            height: 0%;
+            background-color: $primary-color;
+            border-radius: 20px;
+            transition: .5s;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+        }
+
+        button:hover:before {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        button:hover svg {
+            fill: $background;
+        }
+    }
+}

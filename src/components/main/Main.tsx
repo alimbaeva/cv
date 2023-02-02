@@ -1,22 +1,23 @@
 import { FC } from 'react';
 import { PortfolioSlide } from '../portfolioSlide/PortfolioSlide';
 import { Tasks } from '../tasks/Tasks';
+import './main.scss';
 
 export const Main: FC = () => {
   return (
     <div className="main">
       <div className="main_head">
         <h1>Алымбаева Асель</h1>
-        <div>
+        <div className="title-prof">
           <p>Frontend developer</p>
         </div>
         <div className="main_about">
           <h5>Коротко о себе</h5>
-          <div className="main_about-text">
+          <div className="main_about-text block-text">
             <p>
               Люблю &ldquo;думать в слух&ldquo; и разбирать фильмы и мультфильмы. Свободное время
               стараюсь гулят на природе и заниматься спортом. Не люблю сидеть без дела и поэтому
-              интересные идеи и занятия.
+              всегда ищу интересные идеи и занятия.
             </p>
             <p>
               Для меня самым дорогим является время и здоровье. Поэтому я пунктуален и ценю людей

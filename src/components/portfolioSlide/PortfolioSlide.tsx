@@ -1,14 +1,17 @@
 import { FC } from 'react';
+import taskMeneger1 from '../../assets/taskMeneger-1.png';
+import './portfolioSlide.scss';
 
 export const PortfolioSlide: FC = () => {
   return (
     <div className="portfolio-slides">
       <div className="portfolio-slide_item">
         <div className="portfolio-slide_img">
-          <img src="" alt="" />
+          <img src={taskMeneger1} alt="" />
         </div>
         <div className="portfolio-slide_texts">
-          <h5>Menegment Progect</h5>
+          <h6>Menegment Progect</h6>
+          <p>Учебная командная работа</p>
           <div className="portfolio-slide_info">
             <p>Написано:</p>
             <ul>
@@ -20,8 +23,8 @@ export const PortfolioSlide: FC = () => {
               <li>Eslint</li>
             </ul>
           </div>
+          <button>Узнать больше</button>
         </div>
-        <button>Узнать больше</button>
       </div>
       <div className="portfolio-slides_btns">
         <button>
