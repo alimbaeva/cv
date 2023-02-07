@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './tasks.scss';
 
 export const Tasks: FC = () => {
   return (

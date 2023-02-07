@@ -10,7 +10,7 @@ export const Rezume: FC = () => {
       <Header />
       <Skills />
       <Main />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

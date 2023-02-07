@@ -2,6 +2,7 @@
 
 .skills-block {
     width: 320px;
+    height: 100%;
     padding: 1rem;
     background-color: $primary-color;
     color: $background;
@@ -27,17 +28,6 @@
             margin-bottom: .4rem;
             animation: 3s 1 normal skills-animation;
         }
-
-        @keyframes skills-animation {
-            from {
-                opacity: 0;
-                transform: translateX(50%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0%);
-            }
-          }
 
         li:hover {
             font-size: 1.06rem;

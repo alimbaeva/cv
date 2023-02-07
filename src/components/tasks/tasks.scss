@@ -1,0 +1,33 @@
+@import '../../main_style.scss';
+
+.task-text {
+    margin-top: 1rem;
+    padding: 1rem 1rem 4rem;
+    background-color: rgba(183, 162, 240, 0.418);
+    position: relative;
+
+    p {
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    button {
+        color: $primary-color;
+        font-weight: 600;
+        padding: .6rem 1rem;
+        background-color: $background;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: .7s;
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    button:hover {
+        padding: .8rem 1.2rem;
+        box-shadow: inset 0px 0px 10px 3px $primary-color;
+        transition: .5s;
+    }
+}

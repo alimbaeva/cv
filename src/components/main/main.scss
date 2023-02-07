@@ -66,5 +66,66 @@
             
         }
     }
+
+    &_about_courses {
+        ul {
+            margin-top: 1rem;
+        }
+        li {
+            margin-bottom: .5rem;
+            animation: 3s 1 normal skills-animation;
+        }
+
+        button {
+            position: relative;
+            width: 180px;
+            height: 35px;
+            margin-left: 77%;
+            margin-bottom: 2rem;
+            @extend %display-flex;
+            background-color: $background;
+            margin-top: 1rem;
+            border-radius: 20px;
+            border: 1px solid $primary-color;
+            cursor: pointer;
+            
+            p, svg {
+                font-weight: 700;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+            
+            p {
+                top: 50%;
+                left: 10%;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+                fill: $primary-color;
+                top: 50%;
+                right: 10%;
+            }
+        }
+
+        button:hover {
+            box-shadow: inset 0px 0px 10px 3px $primary-color;
+            transition: .5s;
+        }
+    }
         
+}
+
+@media (max-width: 1024px) {
+    .main {
+        margin-left: 35%;
+        padding-right: 1rem;
+
+        &_about_courses {
+            button {
+                margin-left: 70%;
+            }
+        }
+    }
 }
