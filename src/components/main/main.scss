@@ -129,3 +129,20 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 425px) {
+    .main {
+        padding-right: 0;
+        &_about_courses {
+            button {
+                margin-left: 50%;
+            }
+        }
+    }
+}

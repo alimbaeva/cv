@@ -7,9 +7,11 @@ export const Main: FC = () => {
   return (
     <div className="main">
       <div className="main_head">
-        <h1>Алымбаева Асель</h1>
-        <div className="title-prof">
-          <p>Frontend developer</p>
+        <div className="main_sub-header">
+          <h1>Алымбаева Асель</h1>
+          <div className="title-prof">
+            <p>Frontend developer</p>
+          </div>
         </div>
         <div className="main_about">
           <h5>Коротко о себе</h5>
