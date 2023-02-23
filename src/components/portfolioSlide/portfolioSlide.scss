@@ -142,7 +142,13 @@
         .portfolio-slides_btns {
             margin-left: 70%;
         }
+        .portfolio-slide_texts {
+            button {
+                width: 117px;
+            }
+        }
     }
+
 }
 
 @media (max-width: 425px) {
@@ -184,6 +190,14 @@
         }
         .portfolio-slides_btns {
             margin-left: 45%;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .portfolio-slides {
+        .portfolio-slides_btns {
+            margin-left: 36%;
         }
     }
 }

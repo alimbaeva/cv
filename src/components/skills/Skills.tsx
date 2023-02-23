@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { data } from '../../data/data';
+import data from '../../data/data';
 import { ListSkills } from './ListSkills';
 import { ObjLists } from './ObjLists';
 // import { meImage } from '../../assets/meImage.jpg';

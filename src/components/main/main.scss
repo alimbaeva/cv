@@ -146,3 +146,14 @@
         }
     }
 }
+
+@media (max-width: 320px) {
+    .main {
+        padding-right: 0;
+        &_about_courses {
+            button {
+                margin-left: 40%;
+            }
+        }
+    }
+}

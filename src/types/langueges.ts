@@ -3,6 +3,15 @@ type TaboutText = {
   text2: string;
 };
 
+type TTaskText = {
+  list: string;
+  listEl: string[] | null;
+};
+
+type TTaskText1 = {
+  taskText: string[];
+};
+
 type Tportfolios = {
   title: string;
   work: string;
@@ -12,6 +21,7 @@ type Tportfolios = {
   comand: string;
   taskTitle: string;
   taskText: string[];
+  taskText2: TTaskText[] | null;
   branches: string[];
   linkToPR: string;
   linkToDeploy: string;
@@ -23,7 +33,7 @@ type TcontactsList = {
   name: string;
 };
 
-export interface ILang {
+export interface ILanguadge {
   lenguege: string;
   title: string;
   profession: string;
@@ -45,6 +55,6 @@ export interface ILang {
   softSkillsList: string[];
   lenguegesTitle: string;
   lenguegesList: string[];
-  contactsTitle: string[];
+  contactsTitle: string;
   contactsList: TcontactsList[];
 }

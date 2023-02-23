@@ -1,7 +1,37 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import './header.scss';
 
 export const Header: FC = () => {
+  const [lahguage, setLanguage] = useState('RU');
+  const [showLanChoose, setShowLanChoose] = useState(false);
+
+  const handleLenguadeChange = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const elementLang = e.currentTarget;
+    elementLang.getAttribute('data-leng') === 'en' ? setLanguage('EN') : setLanguage('RU');
+    elementLang.parentElement?.classList.add('opacitty');
+    localStorage.setItem('language', lahguage);
+    if (showLanChoose) setShowLanChoose(false);
+  };
+
+  const handleLenguadeBtn = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const ulLang = e.currentTarget.nextElementSibling;
+    if (window.screen.availWidth <= 768) {
+      if (ulLang?.classList.contains('opacitty')) {
+        ulLang?.classList.remove('opacitty');
+        setShowLanChoose(true);
+      } else {
+        ulLang?.classList.add('opacitty');
+        setShowLanChoose(false);
+      }
+    } else {
+      if (ulLang?.classList.contains('opacitty')) {
+        ulLang?.classList.remove('opacitty');
+      } else {
+        ulLang?.classList.add('opacitty');
+      }
+    }
+  };
+
   return (
     <header>
       <div className="container header">
@@ -19,9 +49,17 @@ export const Header: FC = () => {
             />
           </svg>
         </button>
-        <button>
-          <p>RU</p>
+        <button onClick={handleLenguadeBtn}>
+          <p>{lahguage}</p>
         </button>
+        <ul className={showLanChoose ? 'choose-language' : 'opacitty'}>
+          <li onClick={handleLenguadeChange} key="1" data-leng="ru">
+            <p>RU</p>
+          </li>
+          <li onClick={handleLenguadeChange} key="2" data-leng="en">
+            <p>EN</p>
+          </li>
+        </ul>
       </div>
     </header>
   );

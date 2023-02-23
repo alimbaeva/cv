@@ -1,4 +1,4 @@
-export const data = {
+const data = {
   en: {
     lenguege: 'EN',
     title: 'Asel Alymbaeva',
@@ -45,6 +45,7 @@ export const data = {
           confirmation mode.`,
           `A task has creator information and board and column data.`,
         ],
+        taskText2: [],
         branches: ['main-page', 'page-404', 'card-create', 'routing', 'edit-modal-fix'],
         linkToPR: '',
         linkToDeploy: '',
@@ -69,6 +70,8 @@ export const data = {
           are added either in the order in which the user
           marked them as difficult, either / the order in which they
           were in the textbook.`,
+        ],
+        taskText2: [
           {
             list: 'Each page of the tutorial displays',
             listEl: [
@@ -127,6 +130,7 @@ export const data = {
             ],
           },
         ],
+
         branches: ['book-develop'],
         linkToPR: '',
         linkToDeploy: '',
@@ -140,6 +144,11 @@ export const data = {
         comand: '',
         taskTitle: 'Requirement:',
         taskText: [
+          `Implemented text search for all product data.`,
+          `Implemented button to reset all filters`,
+          `Storing data in localStorage, data about added products stored in localStorage and on page reload are being restored.`,
+        ],
+        taskText2: [
           {
             list: 'Implemented product filtering',
             listEl: [
@@ -169,9 +178,6 @@ export const data = {
               to more and vice versa)`,
             ],
           },
-          `Implemented text search for all product data.`,
-          `Implemented button to reset all filters`,
-          `Storing data in localStorage, data about added products stored in localStorage and on page reload are being restored.`,
         ],
         branches: ['book-develop'],
         linkToPR: '',
@@ -219,6 +225,7 @@ export const data = {
           active.`,
           `With width < 768px, there is no pet image in the popup design.`,
         ],
+        taskText2: [],
         branches: [],
         linkToPR: '',
         linkToDeploy: '',
@@ -243,6 +250,8 @@ export const data = {
           enough to ensure that there is no horizontal stripe
           scroll. Also at this stage, the layout is added
           responsive menu, for which js is used.`,
+        ],
+        taskText2: [
           {
             list: 'Using JavaScript to add interactivity to the page:',
             listEl: [
@@ -361,6 +370,7 @@ export const data = {
           режим подтверждени.`,
           `Задача имеет информаци о создателе и данные доски и колонки.`,
         ],
+        taskText2: [],
         branches: ['main-page', 'page-404', 'card-create', 'routing', 'edit-modal-fix'],
         linkToPR: '',
         linkToDeploy: '',
@@ -386,6 +396,8 @@ export const data = {
           добавля тся либо в том порядке, в котором пользователь 
           отмечал их как сложные, либо / порядке, в котором они 
           находились в учебнике'.`,
+        ],
+        taskText2: [
           {
             list: 'На каждой странице учебника отображается',
             listEl: [
@@ -462,6 +474,13 @@ export const data = {
         comand: '',
         taskTitle: 'Требование:',
         taskText: [
+          `Реализован текстовый поиск по всем данным продуктов.`,
+          `Реализована кнопка сброса всех фильтров`,
+          `Хранение данных в localStorage, данные о добавленных продуктах 
+          хранятся в localStorage и при перезагрузке страницы 
+          восстанавливаются.`,
+        ],
+        taskText2: [
           {
             list: 'Реализована фильтрация продуктов',
             listEl: [
@@ -494,11 +513,6 @@ export const data = {
               к большему и наоборот)`,
             ],
           },
-          `Реализован текстовый поиск по всем данным продуктов.`,
-          `Реализована кнопка сброса всех фильтров`,
-          `Хранение данных в localStorage, данные о добавленных продуктах 
-          хранятся в localStorage и при перезагрузке страницы 
-          восстанавливаются.`,
         ],
         branches: ['book-develop'],
         linkToPR: '',
@@ -555,6 +569,7 @@ export const data = {
           активным.`,
           `При width < 768px в дизайне попапа картинки питомца нет.`,
         ],
+        taskText2: [],
         branches: [],
         linkToPR: '',
         linkToDeploy: '',
@@ -579,6 +594,8 @@ export const data = {
           достаточно обеспечить отсутствие горизонтальной полосы 
           прокрутки. Также на этом этапе в вёрстку добавляется
           адаптивное меню, для создания которого используется js.`,
+        ],
+        taskText2: [
           {
             list: 'Используем JavaScript для добавления странице интерактивности:',
             listEl: [
@@ -636,3 +653,5 @@ export const data = {
     ],
   },
 };
+
+export default data;

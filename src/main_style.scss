@@ -29,6 +29,10 @@ $background: #FFFFFF;
     justify-content: center;
   }
 
+.opacitty {
+  opacity: 0;
+}
+
 @keyframes skills-animation {
   from {
       opacity: 0;
