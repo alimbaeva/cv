@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { useSelector } from 'react-redux';
 import taskMeneger1 from '../../assets/taskMeneger-1.png';
 import { RootState } from '../../store';
@@ -6,7 +6,23 @@ import './portfolioSlide.scss';
 
 export const PortfolioSlide: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+  const [numberPortfolio, setNumberPortfolio] = useState(0);
+  const lengePortfolio = translate.portfolios.length - 1;
 
+  const handleLeft = () => {
+    if (numberPortfolio === 0) {
+      setNumberPortfolio(lengePortfolio);
+    } else {
+      setNumberPortfolio(numberPortfolio - 1);
+    }
+  };
+  const handleRight = () => {
+    if (numberPortfolio === lengePortfolio) {
+      setNumberPortfolio(0);
+    } else {
+      setNumberPortfolio(numberPortfolio + 1);
+    }
+  };
   return (
     <div className="portfolio-slides">
       <div className="portfolio-slide_item">
@@ -14,12 +30,12 @@ export const PortfolioSlide: FC = () => {
           <img src={taskMeneger1} alt="" />
         </div>
         <div className="portfolio-slide_texts">
-          <h6>{translate.portfolios[0].title}</h6>
-          <p>{translate.portfolios[0].work}</p>
+          <h6>{translate.portfolios[numberPortfolio].title}</h6>
+          <p>{translate.portfolios[numberPortfolio].work}</p>
           <div className="portfolio-slide_info">
-            <p>{translate.portfolios[0].writingtitle}</p>
+            <p>{translate.portfolios[numberPortfolio].writingtitle}</p>
             <ul>
-              {translate.portfolios[0].writingLengueges.split(',').map((el, id) => {
+              {translate.portfolios[numberPortfolio].writingLengueges.split(',').map((el, id) => {
                 return <li key={id}>{el}</li>;
               })}
             </ul>
@@ -28,7 +44,7 @@ export const PortfolioSlide: FC = () => {
         </div>
       </div>
       <div className="portfolio-slides_btns">
-        <button>
+        <button onClick={handleLeft}>
           <svg
             version="1.1"
             id="Capa_1"
@@ -48,7 +64,7 @@ export const PortfolioSlide: FC = () => {
             </g>
           </svg>
         </button>
-        <button>
+        <button onClick={handleRight}>
           <svg
             version="1.1"
             id="Capa_1"
