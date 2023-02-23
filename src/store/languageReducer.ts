@@ -21,6 +21,13 @@ export const LanguageSlice = createSlice({
     },
     setTranslate: (state: ILangState, action) => {
       state.translate = action.payload === 'EN' ? data.en : data.ru;
+      console.log('state.translate', state.translate);
     },
   },
 });
+
+const { actions: actionLanguage, reducer: reducerLanguage } = LanguageSlice;
+
+export const { setLanguage, setTranslate } = actionLanguage;
+
+export default reducerLanguage;

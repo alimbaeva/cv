@@ -1,15 +1,20 @@
 import { FC, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setTranslate } from '../../store/languageReducer';
 import './header.scss';
 
 export const Header: FC = () => {
+  const dispatch = useDispatch();
   const [lahguage, setLanguage] = useState('RU');
   const [showLanChoose, setShowLanChoose] = useState(false);
 
   const handleLenguadeChange = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     const elementLang = e.currentTarget;
-    elementLang.getAttribute('data-leng') === 'en' ? setLanguage('EN') : setLanguage('RU');
+    const lang = elementLang.getAttribute('data-leng') === 'en' ? 'EN' : 'RU';
+    setLanguage(lang);
     elementLang.parentElement?.classList.add('opacitty');
-    localStorage.setItem('language', lahguage);
+    localStorage.setItem('language', lang);
+    dispatch(setTranslate(lang));
     if (showLanChoose) setShowLanChoose(false);
   };
 

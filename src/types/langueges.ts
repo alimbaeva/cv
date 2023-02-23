@@ -42,6 +42,9 @@ export interface ILanguadge {
   portfolioTitle: string;
   portfolios: Tportfolios[];
   taskCodeTitle: string;
+  taskCodeText_1: string;
+  taskCodeText_2: string;
+  taskCodeShow: string;
   coursesTitle: string;
   courses: string[];
   btnCertificate: string;

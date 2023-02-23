@@ -1,8 +1,12 @@
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import taskMeneger1 from '../../assets/taskMeneger-1.png';
+import { RootState } from '../../store';
 import './portfolioSlide.scss';
 
 export const PortfolioSlide: FC = () => {
+  const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+
   return (
     <div className="portfolio-slides">
       <div className="portfolio-slide_item">
@@ -10,20 +14,17 @@ export const PortfolioSlide: FC = () => {
           <img src={taskMeneger1} alt="" />
         </div>
         <div className="portfolio-slide_texts">
-          <h6>Menegment Progect</h6>
-          <p>Учебная командная работа</p>
+          <h6>{translate.portfolios[0].title}</h6>
+          <p>{translate.portfolios[0].work}</p>
           <div className="portfolio-slide_info">
-            <p>Написано:</p>
+            <p>{translate.portfolios[0].writingtitle}</p>
             <ul>
-              <li>React</li>
-              <li>Redux-toolkit</li>
-              <li>React-hook-form</li>
-              <li>SCSS</li>
-              <li>MUI</li>
-              <li>Eslint</li>
+              {translate.portfolios[0].writingLengueges.split(',').map((el, id) => {
+                return <li key={id}>{el}</li>;
+              })}
             </ul>
           </div>
-          <button>Узнать больше</button>
+          <button>{translate.btnLernMore}</button>
         </div>
       </div>
       <div className="portfolio-slides_btns">

@@ -1,35 +1,34 @@
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import data from '../../data/data';
+import { RootState } from '../../store';
 import { ListSkills } from './ListSkills';
 import { ObjLists } from './ObjLists';
-// import { meImage } from '../../assets/meImage.jpg';
 import './skillsBlock.scss';
 
 export const Skills: FC = () => {
+  const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+
   return (
     <div className="skills-block">
       <div className="image"></div>
-      <h1>Алымбаева Асель Кадырбековна</h1>
+      <h1>{translate.title}</h1>
       <div className="skills-block__text">
         <div className="skills-block__par">
-          <h2>{data.en.hardSkillsTitle}</h2>
-          <ListSkills lists={data.en.hardSkillsList} />
+          <h2>{translate.hardSkillsTitle}</h2>
+          <ListSkills lists={translate.hardSkillsList} />
         </div>
         <div>
-          <h2>{data.en.softSkillsTitle}</h2>
-          <ListSkills lists={data.en.softSkillsList} />
+          <h2>{translate.softSkillsTitle}</h2>
+          <ListSkills lists={translate.softSkillsList} />
         </div>
         <div>
-          <h2>{data.en.lenguegesTitle}</h2>
-          <ListSkills lists={data.en.lenguegesList} />
+          <h2>{translate.lenguegesTitle}</h2>
+          <ListSkills lists={translate.lenguegesList} />
         </div>
         <div>
-          <h2>{data.en.lenguegesTitle}</h2>
-          <ListSkills lists={data.en.lenguegesList} />
-        </div>
-        <div>
-          <h2>{data.en.contactsTitle}</h2>
-          <ObjLists objList={data.en.contactsList} />
+          <h2>{translate.contactsTitle}</h2>
+          <ObjLists objList={translate.contactsList} />
         </div>
       </div>
     </div>
