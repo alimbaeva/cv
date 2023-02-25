@@ -1,11 +1,14 @@
 import { FC, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import taskMeneger1 from '../../assets/taskMeneger-1.png';
 import { RootState } from '../../store';
+import { setNumber, setShow } from '../../store/teaskReducer';
 import './portfolioSlide.scss';
 
 export const PortfolioSlide: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+  const dispatch = useDispatch();
   const [numberPortfolio, setNumberPortfolio] = useState(0);
   const lengePortfolio = translate.portfolios.length - 1;
 
@@ -23,6 +26,12 @@ export const PortfolioSlide: FC = () => {
       setNumberPortfolio(numberPortfolio + 1);
     }
   };
+
+  const handleAboutTasks = () => {
+    dispatch(setNumber(numberPortfolio));
+    dispatch(setShow(true));
+  };
+
   return (
     <div className="portfolio-slides">
       <div className="portfolio-slide_item">
@@ -40,7 +49,7 @@ export const PortfolioSlide: FC = () => {
               })}
             </ul>
           </div>
-          <button>{translate.btnLernMore}</button>
+          <button onClick={handleAboutTasks}>{translate.btnLernMore}</button>
         </div>
       </div>
       <div className="portfolio-slides_btns">

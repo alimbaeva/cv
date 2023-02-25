@@ -1,0 +1,63 @@
+@import '../../main_style.scss';
+
+.topic {
+}
+.about-topic {
+    max-width: 800px;
+    margin: 10% auto;
+
+    h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 44px;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    h4 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        position: relative;
+    }
+    ul {
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__btns {
+        @extend %display-flex ;
+        justify-content: space-around;
+        button {
+            width: 255px;
+            height: 54px;
+            border-radius: 100px;
+            background-color: $background;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: 1px solid $primary-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.about-topic__back-btn {
+    margin-top: 3.4rem;
+    margin-left: 94.9%;
+    @extend %around-button;
+    background-color: $background;
+
+    svg {
+        width: 27px;
+        height: 27px;
+        fill: $primary-color;
+    }
+}
