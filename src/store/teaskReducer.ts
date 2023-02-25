@@ -6,7 +6,9 @@ interface ITask {
 }
 
 const TaskInitialState: ITask = {
-  number: 0,
+  number: localStorage.getItem('numberPortfolio')
+    ? Number(localStorage.getItem('numberPortfolio'))
+    : 0,
   show: false,
 };
 

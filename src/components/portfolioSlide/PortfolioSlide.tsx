@@ -8,22 +8,27 @@ import './portfolioSlide.scss';
 
 export const PortfolioSlide: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+  const { number } = useSelector((store: RootState) => store.reducerTask);
   const dispatch = useDispatch();
-  const [numberPortfolio, setNumberPortfolio] = useState(0);
+  const [numberPortfolio, setNumberPortfolio] = useState(number);
   const lengePortfolio = translate.portfolios.length - 1;
 
   const handleLeft = () => {
     if (numberPortfolio === 0) {
       setNumberPortfolio(lengePortfolio);
+      localStorage.setItem('numberPortfolio', `${lengePortfolio}`);
     } else {
       setNumberPortfolio(numberPortfolio - 1);
+      localStorage.setItem('numberPortfolio', `${numberPortfolio - 1}`);
     }
   };
   const handleRight = () => {
     if (numberPortfolio === lengePortfolio) {
       setNumberPortfolio(0);
+      localStorage.setItem('numberPortfolio', `${0}`);
     } else {
       setNumberPortfolio(numberPortfolio + 1);
+      localStorage.setItem('numberPortfolio', `${numberPortfolio + 1}`);
     }
   };
 

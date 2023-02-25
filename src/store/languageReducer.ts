@@ -9,7 +9,7 @@ export interface ILangState {
 
 const initialLanguage: ILangState = {
   language: localStorage.getItem('language') ? localStorage.getItem('language') : 'RU',
-  translate: data.ru,
+  translate: localStorage.getItem('language') === 'EN' ? data.en : data.ru,
 };
 
 export const LanguageSlice = createSlice({

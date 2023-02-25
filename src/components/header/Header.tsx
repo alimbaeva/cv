@@ -1,11 +1,14 @@
 import { FC, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { RootState } from '../../store';
 import { setTranslate } from '../../store/languageReducer';
 import './header.scss';
 
 export const Header: FC = () => {
+  const { language } = useSelector((state: RootState) => state.reducerLanguage);
   const dispatch = useDispatch();
-  const [lahguage, setLanguage] = useState('RU');
+  const [lahguage, setLanguage] = useState(language);
   const [showLanChoose, setShowLanChoose] = useState(false);
 
   const handleLenguadeChange = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
