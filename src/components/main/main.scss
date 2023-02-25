@@ -110,8 +110,7 @@
         }
 
         button:hover {
-            box-shadow: inset 0px 0px 10px 3px $primary-color;
-            transition: .5s;
+            @extend %btn-hover-shadow;
         }
     }
         

@@ -17,12 +17,7 @@
         font-weight: 900;
 
         svg {
-            fill: $primary-color;
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            transform: translateX(-5%);
-            z-index: 1;
+            @extend %btn-svg;
         }
        
         p {
@@ -35,24 +30,11 @@
 
     
     button::before {
-        content: "";
-        width: 0%;
-        height: 0%;
-        background-color: $primary-color;
-        border-radius: 50px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 1;
+        @extend %btn-before;
     }
 
     button:hover:before {
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        transform: scale(1.05);
-        transition: 0.5s;
+        @extend %btn-anim-hover;
     }
 
     button:hover p {
@@ -60,7 +42,7 @@
     }
 
     button:hover svg {
-        fill: $background;
+        @extend %btn-svg-anim-hover;
     }
 
     ul {
@@ -88,23 +70,10 @@
         }
 
         li::before {
-            content: "";
-            width: 0%;
-            height: 0%;
-            background-color: $primary-color;
-            border-radius: 50px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 1;
+            @extend %btn-before;
         }
         li:hover:before {
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            transform: scale(1.05);
-            transition: 0.5s;
+            @extend %btn-anim-hover;
         }
         li:hover p {
             color: $background;

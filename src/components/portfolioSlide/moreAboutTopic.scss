@@ -46,6 +46,10 @@
             border: 1px solid $primary-color;
             cursor: pointer;
         }
+
+        button:hover {
+            @extend %btn-hover-shadow;
+        }
     }
 }
 
@@ -54,10 +58,25 @@
     margin-left: 94.9%;
     @extend %around-button;
     background-color: $background;
+    position: relative;
 
     svg {
         width: 27px;
         height: 27px;
-        fill: $primary-color;
+        @extend %btn-svg;
+        top: 20%;
+        left: 20%;
     }
+}
+
+.about-topic__back-btn::before {
+    @extend %btn-before;
+}
+
+.about-topic__back-btn:hover:before {
+    @extend %btn-anim-hover;
+}
+
+.about-topic__back-btn:hover svg {
+    @extend %btn-svg-anim-hover;
 }
