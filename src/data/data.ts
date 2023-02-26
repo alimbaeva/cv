@@ -47,8 +47,8 @@ const data = {
         ],
         taskText2: [],
         branches: ['main-page', 'page-404', 'card-create', 'routing', 'edit-modal-fix'],
-        linkToPR: '',
-        linkToDeploy: '',
+        linkToPR: 'https://github.com/Darina992/project-management-app/pull/26',
+        linkToDeploy: `https://darina992-project-managment-app.netlify.app/`,
       },
       {
         title: 'RS Lang',
@@ -132,7 +132,7 @@ const data = {
         ],
 
         branches: ['book-develop'],
-        linkToPR: '',
+        linkToPR: 'https://github.com/rrroeva/rslang/pull/84',
         linkToDeploy: '',
       },
       {
@@ -180,8 +180,9 @@ const data = {
           },
         ],
         branches: ['book-develop'],
-        linkToPR: '',
-        linkToDeploy: '',
+        linkToPR:
+          'https://github.com/alimbaeva/rsschool_tasks_stage2_2022/tree/Online-Store/online-store',
+        linkToDeploy: 'https://alimbaeva-online-store.netlify.app/',
       },
       {
         title: 'Shelter',
@@ -228,7 +229,8 @@ const data = {
         taskText2: [],
         branches: [],
         linkToPR: '',
-        linkToDeploy: '',
+        linkToDeploy:
+          'https://rolling-scopes-school.github.io/alimbaeva-JSFE2022Q1/shelter/pages/main/index.html',
       },
       {
         title: 'portfolio',
@@ -262,8 +264,9 @@ const data = {
           },
         ],
         branches: [],
-        linkToPR: '',
-        linkToDeploy: '',
+        linkToPR: 'https://github.com/alimbaeva/Portfolio_RS-SCHOOL_2022_st0/tree/main/portfolio',
+        linkToDeploy:
+          'https://alimbaeva.github.io/Portfolio_RS-SCHOOL_2022_st0/portfolio/index.html',
       },
     ],
     taskCodeTitle: 'Code Example',
@@ -376,8 +379,8 @@ const data = {
         ],
         taskText2: [],
         branches: ['main-page', 'page-404', 'card-create', 'routing', 'edit-modal-fix'],
-        linkToPR: '',
-        linkToDeploy: '',
+        linkToPR: 'https://github.com/Darina992/project-management-app/pull/26',
+        linkToDeploy: 'https://darina992-project-managment-app.netlify.app/',
       },
       {
         title: 'RS Lang',
@@ -466,7 +469,7 @@ const data = {
           },
         ],
         branches: ['book-develop'],
-        linkToPR: '',
+        linkToPR: 'https://github.com/rrroeva/rslang/pull/84',
         linkToDeploy: '',
       },
       {
@@ -519,8 +522,9 @@ const data = {
           },
         ],
         branches: ['book-develop'],
-        linkToPR: '',
-        linkToDeploy: '',
+        linkToPR:
+          'https://github.com/alimbaeva/rsschool_tasks_stage2_2022/tree/Online-Store/online-store',
+        linkToDeploy: 'https://alimbaeva-online-store.netlify.app/',
       },
       {
         title: 'Shelter',
@@ -576,7 +580,8 @@ const data = {
         taskText2: [],
         branches: [],
         linkToPR: '',
-        linkToDeploy: '',
+        linkToDeploy:
+          'https://rolling-scopes-school.github.io/alimbaeva-JSFE2022Q1/shelter/pages/main/index.html',
       },
       {
         title: 'portfolio',
@@ -610,8 +615,9 @@ const data = {
           },
         ],
         branches: [],
-        linkToPR: '',
-        linkToDeploy: '',
+        linkToPR: 'https://github.com/alimbaeva/Portfolio_RS-SCHOOL_2022_st0/tree/main/portfolio',
+        linkToDeploy:
+          'https://alimbaeva.github.io/Portfolio_RS-SCHOOL_2022_st0/portfolio/index.html',
       },
     ],
     taskCodeTitle: 'Пример кода',

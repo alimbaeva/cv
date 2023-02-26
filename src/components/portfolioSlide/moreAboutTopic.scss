@@ -45,6 +45,11 @@
             font-weight: 700;
             border: 1px solid $primary-color;
             cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+            }
         }
 
         button:hover {

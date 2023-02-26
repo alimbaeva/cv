@@ -44,18 +44,38 @@ export const MoreAboutTopic: FC<IProps> = ({ numberPortfolio }: IProps) => {
           </div>
           <h4>Ветки в которой я работала:</h4>
           <ul>
-            {translate.portfolios[0].branches.map((el, id) => {
+            {translate.portfolios[numberPortfolio].branches.map((el, id) => {
               return <li key={id}>{el}</li>;
             })}
           </ul>
         </div>
         <div className="about-topic__btns">
-          <button>
-            <a href={translate.portfolios[0].linkToPR}>Ссылка на PR</a>
-          </button>
-          <button>
-            <a href={translate.portfolios[0].linkToDeploy}>Ссылка на Deploy</a>
-          </button>
+          {translate.portfolios[numberPortfolio].linkToPR ? (
+            <button>
+              <a
+                href={translate.portfolios[numberPortfolio].linkToPR}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ссылка на PR
+              </a>
+            </button>
+          ) : (
+            ''
+          )}
+          {translate.portfolios[numberPortfolio].linkToDeploy ? (
+            <button>
+              <a
+                href={translate.portfolios[numberPortfolio].linkToDeploy}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ссылка на Deploy
+              </a>
+            </button>
+          ) : (
+            ''
+          )}
         </div>
         <BackBtn />
       </div>
