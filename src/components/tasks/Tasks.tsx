@@ -10,7 +10,15 @@ export const Tasks: FC = () => {
     <div className="task-text">
       <p>{translate.taskCodeText_1}</p>
       <p>{translate.taskCodeText_2}</p>
-      <button>{translate.taskCodeShow}</button>
+      <button>
+        <a
+          href="https://github.com/alimbaeva/tasks_for_portfolio_2023/blob/main/sostavChisla/test_1.2.js"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {translate.taskCodeShow}
+        </a>
+      </button>
     </div>
   );
 };

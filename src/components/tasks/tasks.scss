@@ -12,7 +12,6 @@
     }
 
     button {
-        color: $primary-color;
         font-weight: 600;
         padding: .6rem 1rem;
         background-color: $background;
@@ -23,6 +22,11 @@
         position: absolute;
         right: 1rem;
         bottom: 1rem;
+
+        a {
+            text-decoration: none;
+            color: $primary-color;
+        }
     }
 
     button:hover {
