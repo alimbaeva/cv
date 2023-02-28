@@ -35,3 +35,39 @@
         transition: .5s;
     }
 }
+.task-textDark {
+    margin-top: 1rem;
+    padding: 1rem 1rem 4rem;
+    background-color: inherit;
+    position: relative;
+    
+    p {
+        color: $backgroundDark !important;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    button {
+        font-weight: 600;
+        padding: .6rem 1rem;
+        background-color: $backgroundDark;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: .7s;
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+
+        a {
+            text-decoration: none;
+            color: $Dark;
+        }
+    }
+
+    button:hover {
+        padding: .8rem 1.2rem;
+        box-shadow: inset 0px 0px 10px 3px $Dark;
+        transition: .5s;
+    }
+}

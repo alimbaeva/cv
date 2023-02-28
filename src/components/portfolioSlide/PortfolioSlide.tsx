@@ -9,6 +9,7 @@ import './portfolioSlide.scss';
 export const PortfolioSlide: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
   const { number } = useSelector((store: RootState) => store.reducerTask);
+  const { color } = useSelector((state: RootState) => state.ColorReducer);
   const dispatch = useDispatch();
   const [numberPortfolio, setNumberPortfolio] = useState(number);
   const lengePortfolio = translate.portfolios.length - 1;
@@ -38,7 +39,7 @@ export const PortfolioSlide: FC = () => {
   };
 
   return (
-    <div className="portfolio-slides">
+    <div className={color ? 'portfolio-slidesDark' : 'portfolio-slides'}>
       <div className="portfolio-slide_item">
         <div className="portfolio-slide_img">
           <img src={taskMeneger1} alt="" />

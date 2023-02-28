@@ -1,9 +1,21 @@
 @import '../../main_style.scss';
 
-footer {
+.footer {
     min-height: 65px;
     margin-top: 4rem;
     background-color: $primary-color;
+    display: flex;
+    align-items: center;
+
+    h2 {
+        color: $background;
+        text-align: center;
+    }
+}
+.footerDark {
+    min-height: 65px;
+    margin-top: 4rem;
+    background-color: $primary-colorDarck;
     display: flex;
     align-items: center;
 

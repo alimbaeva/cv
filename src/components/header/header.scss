@@ -80,9 +80,97 @@
         }
     }
 }
+.headerD {
+    min-height: 76px;
+    width: 100%;
+    @extend %display-flex;
+    justify-content: flex-end;
+    position: relative;
+    
+    button {
+        margin-right: 1rem;
+        @extend %around-button;
+        border-color: $Dark;
+        position: relative;
+        background-color: $backgroundDark;
+        color: $Dark;
+        font-size: 1.2rem;
+        font-weight: 900;
+
+        svg {
+            @extend %btn-svg;
+            fill: $Dark;
+            top: 5%;
+        }
+       
+        p {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            z-index: 1;
+        }
+    }
+
+    
+    button::before {
+        @extend %btn-before;
+        background-color: $Dark;
+    }
+
+    button:hover:before {
+        @extend %btn-anim-hover;
+    }
+
+    button:hover p {
+        color: $backgroundDark;
+    }
+
+    button:hover svg {
+        @extend %btn-svg-anim-hover;
+        fill: $backgroundDark;
+    }
+
+    ul {
+        display: flex;
+        padding: 0;
+        position: absolute;
+        bottom: -60%;
+        right: 1%;
+        li {
+            margin-left: .5rem;
+            list-style: none;
+            display: block;
+            text-align: center;;
+            @extend %around-button;
+            background-color: $backgroundDark;
+            border-color: $Dark;
+            color: $Dark;
+            font-size: 1.2rem;
+            font-weight: 900;
+            position: relative;
+        }
+        p{
+            position: absolute;
+            left: 25%;
+            top: 30%;
+            z-index: 1;
+        }
+
+        li::before {
+            @extend %btn-before;
+            background-color: $Dark;
+        }
+        li:hover:before {
+            @extend %btn-anim-hover;
+        }
+        li:hover p {
+            color: $backgroundDark;
+        }
+    }
+}
 
 @media (max-width: 768px) {
-    .header {
+    .header, .headerD {
         ul {
             position: relative;
             display: none;

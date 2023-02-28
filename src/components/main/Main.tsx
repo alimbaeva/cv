@@ -7,11 +7,12 @@ import './main.scss';
 
 export const Main: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+  const { color } = useSelector((state: RootState) => state.ColorReducer);
 
   return (
-    <div className="main">
-      <div className="main_head">
-        <div className="main_sub-header">
+    <div className={color ? 'mainDark' : 'main'}>
+      <div className={color ? 'mainDark_head' : 'main_head'}>
+        <div className={color ? 'mainDark_sub-header' : 'main_sub-header'}>
           <h1>{translate.title}</h1>
           <div className="title-prof">
             <p>{translate.profession}</p>
@@ -19,19 +20,19 @@ export const Main: FC = () => {
         </div>
         <div className="main_about">
           <h5>{translate.aboutTitle}</h5>
-          <div className="main_about-text block-text">
+          <div className={color ? 'mainDark_about-text block-text' : 'main_about-text block-text'}>
             <p>{translate.aboutText.text1}</p>
             <p>{translate.aboutText.text2}</p>
           </div>
           <h5>{translate.portfolioTitle}</h5>
-          <div className="main_about-slide">
+          <div className={color ? 'mainDark_about-slide' : 'main_about-slide'}>
             <PortfolioSlide />
           </div>
           <div className="main_about_tasks">
             <h5>{translate.taskCodeTitle}</h5>
             <Tasks />
           </div>
-          <div className="main_about_courses ">
+          <div className={color ? 'mainDark_about_courses' : 'main_about_courses'}>
             <h5>{translate.coursesTitle}</h5>
             <ul className="">
               {translate.courses.map((el, id) => {

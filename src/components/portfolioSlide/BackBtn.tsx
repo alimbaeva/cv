@@ -1,8 +1,10 @@
 import { FC } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store';
 import { setShow } from '../../store/teaskReducer';
 
 export const BackBtn: FC = () => {
+  const { color } = useSelector((state: RootState) => state.ColorReducer);
   const dispatch = useDispatch();
 
   const handleBack = () => {
@@ -10,7 +12,10 @@ export const BackBtn: FC = () => {
   };
 
   return (
-    <button className="about-topic__back-btn" onClick={handleBack}>
+    <button
+      className={color ? 'about-topicDark__back-btn' : 'about-topic__back-btn'}
+      onClick={handleBack}
+    >
       <svg
         version="1.1"
         id="Capa_1"

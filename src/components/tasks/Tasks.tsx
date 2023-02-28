@@ -5,9 +5,10 @@ import './tasks.scss';
 
 export const Tasks: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+  const { color } = useSelector((state: RootState) => state.ColorReducer);
 
   return (
-    <div className="task-text">
+    <div className={color ? 'task-textDark' : 'task-text'}>
       <p>{translate.taskCodeText_1}</p>
       <p>{translate.taskCodeText_2}</p>
       <button>

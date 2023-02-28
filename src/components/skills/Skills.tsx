@@ -8,13 +8,14 @@ import './skillsBlock.scss';
 
 export const Skills: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+  const { color } = useSelector((state: RootState) => state.ColorReducer);
 
   return (
-    <div className="skills-block">
+    <div className={color ? 'skills-blockDark' : 'skills-block'}>
       <div className="image"></div>
       <h1>{translate.title}</h1>
-      <div className="skills-block__text">
-        <div className="skills-block__par">
+      <div className={color ? 'skills-blockDark__text' : 'skills-block__text'}>
+        <div className={color ? 'skills-blockDark__par' : 'skills-block__par'}>
           <h2>{translate.hardSkillsTitle}</h2>
           <ListSkills lists={translate.hardSkillsList} />
         </div>

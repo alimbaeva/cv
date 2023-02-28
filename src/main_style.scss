@@ -1,6 +1,9 @@
 $primary-color: rgba(66, 49, 114, 1);
+$primary-colorDarck: #4A4032;
 $backgroundTopic: #201932;
 $background: #FFFFFF;
+$backgroundDark: #FFDEAD;
+$Dark: #000000;
 
 
 *,
@@ -8,6 +11,10 @@ $background: #FFFFFF;
 *::before {
     box-sizing: border-box;
     margin: 0;
+}
+
+.App {
+  background-color: $Dark;
 }
 
 .container {

@@ -10,12 +10,13 @@ interface IProps {
 
 export const MoreAboutTopic: FC<IProps> = ({ numberPortfolio }: IProps) => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
+  const { color } = useSelector((state: RootState) => state.ColorReducer);
 
   return (
     <section className="topic">
       <div className="">
         <BackBtn />
-        <div className="about-topic">
+        <div className={color ? 'about-topicDark' : 'about-topic'}>
           <h2>{translate.portfolios[numberPortfolio].title}</h2>
           <p>{translate.portfolios[numberPortfolio].review}</p>
           <h4>{translate.portfolios[numberPortfolio].comand}</h4>
@@ -49,7 +50,7 @@ export const MoreAboutTopic: FC<IProps> = ({ numberPortfolio }: IProps) => {
             })}
           </ul>
         </div>
-        <div className="about-topic__btns">
+        <div className={color ? 'about-topicDark__btns' : 'about-topic__btns'}>
           {translate.portfolios[numberPortfolio].linkToPR ? (
             <button>
               <a

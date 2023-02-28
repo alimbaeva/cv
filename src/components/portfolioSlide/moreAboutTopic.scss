@@ -57,7 +57,81 @@
         }
     }
 }
+.about-topicDark {
+    max-width: 800px;
+    margin: 10% auto;
+    color: $backgroundDark;
 
+    h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 44px;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    h4 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        position: relative;
+    }
+    ul {
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__btns {
+        @extend %display-flex ;
+        justify-content: space-around;
+        button {
+            width: 255px;
+            height: 54px;
+            border-radius: 100px;
+            background-color: $backgroundDark;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: 1px solid $Dark;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $Dark;
+            }
+        }
+
+        button:hover {
+            @extend %btn-hover-shadow;
+            box-shadow: inset 0px 0px 10px 3px $Dark;
+        }
+    }
+}
+
+.about-topicDark__back-btn {
+    margin-top: 3.4rem;
+    margin-left: 94.9%;
+    @extend %around-button;
+    border-color: $Dark;
+    background-color: $backgroundDark;
+    position: relative;
+
+    svg {
+        width: 27px;
+        height: 27px;
+        @extend %btn-svg;
+        fill: $Dark;
+        top: 20%;
+        left: 20%;
+    }
+}
 .about-topic__back-btn {
     margin-top: 3.4rem;
     margin-left: 94.9%;
@@ -78,10 +152,24 @@
     @extend %btn-before;
 }
 
+.about-topicDark__back-btn::before {
+    @extend %btn-before;
+    background-color: $Dark;
+}
+
 .about-topic__back-btn:hover:before {
+    @extend %btn-anim-hover;
+}
+
+.about-topicDark__back-btn:hover:before {
     @extend %btn-anim-hover;
 }
 
 .about-topic__back-btn:hover svg {
     @extend %btn-svg-anim-hover;
+}
+
+.about-topicDark__back-btn:hover svg {
+    @extend %btn-svg-anim-hover;
+    fill: $backgroundDark;
 }
