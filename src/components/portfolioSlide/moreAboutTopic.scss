@@ -189,6 +189,15 @@
 }
 
 @media (max-width: 425px) {
+    .about-topic,
+    .about-topicDark {
+        &__btns {
+            flex-direction: column;
+            button {
+                margin-top: 1rem;
+            }
+        }
+    }
     .about-topic__back-btn {
         margin-left: 81%;
     }
