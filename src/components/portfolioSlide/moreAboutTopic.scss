@@ -173,3 +173,26 @@
     @extend %btn-svg-anim-hover;
     fill: $backgroundDark;
 }
+
+@media (max-width: 768px) {
+    .about-topic,
+    .about-topicDark {
+        max-width: 80%;
+    }
+
+    .about-topic__back-btn {
+        margin-left: 89%;
+    }
+    .about-topicDark__back-btn {
+        margin-left: 89%;
+    }
+}
+
+@media (max-width: 425px) {
+    .about-topic__back-btn {
+        margin-left: 81%;
+    }
+    .about-topicDark__back-btn {
+        margin-left: 81%;
+    }
+}
