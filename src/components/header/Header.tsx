@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { RootState } from '../../store';
@@ -43,14 +43,10 @@ export const Header: FC = () => {
   };
 
   const handleColor = () => {
+    localStorage.setItem('appColor', `${!color}`);
     dispatch(setColor(!color));
   };
 
-  useEffect(() => {
-    console.log(color);
-  }, [color]);
-
-  console.log(color);
   return (
     <header>
       <div className={color ? 'container headerD' : 'container header'}>

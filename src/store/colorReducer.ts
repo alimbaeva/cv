@@ -1,11 +1,11 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 export interface IColor {
   color: boolean;
 }
 
 const colorInitialState: IColor = {
-  color: true,
+  color: localStorage.getItem('appColor') === 'true' ? true : false,
 };
 
 const colorSlice = createSlice({
@@ -14,7 +14,6 @@ const colorSlice = createSlice({
   reducers: {
     setColor: (state: IColor, actions) => {
       state.color = actions.payload;
-      console.log('reducer-color', state.color, actions.payload);
     },
   },
 });
