@@ -145,13 +145,6 @@
 
         &__par {
             margin-bottom: 2rem;
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            li {
-                width: 30%;
-            }
         }
     }
 }
@@ -162,11 +155,6 @@
             width: 100%;
             margin-bottom: 2rem;
             position: relative;
-        }
-        &__par {
-            li {
-                width: 50%;
-            }
         }
     }
 }
