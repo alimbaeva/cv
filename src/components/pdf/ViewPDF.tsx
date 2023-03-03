@@ -15,6 +15,9 @@ export const ViewPDF: FC = () => {
 
   return (
     <div className="main pdf">
+      <div className="pdf__btn">
+        <BackBtn />
+      </div>
       <div
         className="rpv-core__viewer"
         style={{
@@ -25,9 +28,6 @@ export const ViewPDF: FC = () => {
           width: '90%',
         }}
       >
-        <div className="pdf__btn">
-          <BackBtn />
-        </div>
         <div
           style={{
             alignItems: 'center',
@@ -49,9 +49,9 @@ export const ViewPDF: FC = () => {
             <Viewer fileUrl="/rez.pdf" plugins={[getFilePluginInstance]} />
           </Worker>
         </div>
-        <div className="pdf__btn">
-          <BackBtn />
-        </div>
+      </div>
+      <div className="pdf__btn">
+        <BackBtn />
       </div>
     </div>
   );

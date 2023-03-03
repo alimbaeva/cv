@@ -3,11 +3,20 @@
     margin-top: 1rem;
 
     &__btn {
-        width: 97%;
+        width: 88%;
         margin-bottom: 1.2rem;
     }
 }
 
+@media (max-width: 1025px) {
+    .pdf {
+        width: 60%;
+    
+        &__btn {
+            width: 100%;
+        }
+    }
+}
 @media (max-width: 768px) {
     .pdf {
         width: 100%;
