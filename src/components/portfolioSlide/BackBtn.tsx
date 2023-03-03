@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
-import { setShow } from '../../store/teaskReducer';
+import { setShow, setViewerPDF } from '../../store/teaskReducer';
 
 export const BackBtn: FC = () => {
   const { color } = useSelector((state: RootState) => state.ColorReducer);
@@ -9,6 +9,7 @@ export const BackBtn: FC = () => {
 
   const handleBack = () => {
     dispatch(setShow(false));
+    dispatch(setViewerPDF(false));
   };
 
   return (

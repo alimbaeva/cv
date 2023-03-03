@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 interface ITask {
   number: number;
   show: boolean;
+  viewerPDF: boolean;
 }
 
 const TaskInitialState: ITask = {
@@ -10,6 +11,7 @@ const TaskInitialState: ITask = {
     ? Number(localStorage.getItem('numberPortfolio'))
     : 0,
   show: false,
+  viewerPDF: false,
 };
 
 export const TaskSlice = createSlice({
@@ -22,11 +24,14 @@ export const TaskSlice = createSlice({
     setShow: (state: ITask, action) => {
       state.show = action.payload;
     },
+    setViewerPDF: (state: ITask, action) => {
+      state.viewerPDF = action.payload;
+    },
   },
 });
 
 const { actions: actionTask, reducer: reducerTask } = TaskSlice;
 
-export const { setNumber, setShow } = actionTask;
+export const { setNumber, setShow, setViewerPDF } = actionTask;
 
 export default reducerTask;

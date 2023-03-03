@@ -1,14 +1,19 @@
 import { FC } from 'react';
-import { useSelector } from 'react-redux';
-import data from '../../data/data';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import { ListSkills } from './ListSkills';
 import { ObjLists } from './ObjLists';
+import { setViewerPDF } from '../../store/teaskReducer';
 import './skillsBlock.scss';
 
 export const Skills: FC = () => {
   const { translate } = useSelector((store: RootState) => store.reducerLanguage);
   const { color } = useSelector((state: RootState) => state.ColorReducer);
+  const dispatch = useDispatch();
+
+  const handlePDF = () => {
+    dispatch(setViewerPDF(true));
+  };
 
   return (
     <div className={color ? 'skills-blockDark' : 'skills-block'}>
@@ -30,6 +35,11 @@ export const Skills: FC = () => {
         <div>
           <h2>{translate.contactsTitle}</h2>
           <ObjLists objList={translate.contactsList} />
+        </div>
+        <div className="view-pdf">
+          <button onClick={handlePDF}>
+            <p>Посмотреть PDF резюме</p>
+          </button>
         </div>
       </div>
     </div>
