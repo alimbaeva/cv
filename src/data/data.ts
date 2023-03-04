@@ -2,6 +2,7 @@ const data = {
   en: {
     lenguege: 'EN',
     title: 'Asel Alymbaeva',
+    pdfResume: 'View PDF summary',
     profession: 'Frontend developer',
     aboutTitle: 'About me.',
     aboutText: {
@@ -335,6 +336,7 @@ const data = {
   ru: {
     lenguege: 'RU',
     title: 'Асель Алымбаева',
+    pdfResume: 'Посмотреть PDF резюме',
     profession: 'Фронтенд разработчик',
     aboutTitle: 'Коротко о себе.',
     aboutText: {

@@ -38,7 +38,7 @@ export const Skills: FC = () => {
         </div>
         <div className="view-pdf">
           <button onClick={handlePDF}>
-            <p>Посмотреть PDF резюме</p>
+            <p>{translate.pdfResume}</p>
           </button>
         </div>
       </div>

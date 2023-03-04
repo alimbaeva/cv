@@ -36,6 +36,7 @@ type TcontactsList = {
 export interface ILanguadge {
   lenguege: string;
   title: string;
+  pdfResume: string;
   profession: string;
   aboutTitle: string;
   aboutText: TaboutText;

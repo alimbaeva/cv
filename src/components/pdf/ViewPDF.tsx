@@ -46,7 +46,7 @@ export const ViewPDF: FC = () => {
           }}
         >
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.3.122/build/pdf.worker.min.js">
-            <Viewer fileUrl="/rez.pdf" plugins={[getFilePluginInstance]} />
+            <Viewer fileUrl="/Resume_AAK.pdf" plugins={[getFilePluginInstance]} />
           </Worker>
         </div>
       </div>
