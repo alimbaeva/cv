@@ -314,7 +314,7 @@ const data = {
       {
         image: 'telegram>',
         link: 'https://t.me/aselAl86',
-        name: 'aselAl86',
+        name: 'asel4A',
       },
       {
         image: 'mail_emal>',
@@ -677,7 +677,7 @@ const data = {
     ],
     contactsTitle: 'Контакт',
     contactsList: [
-      { image: '', link: '', name: 'aselAl86' },
+      { image: '', link: '', name: 'asel4A' },
       { image: '', link: '', name: 'asel.alimbaeva.kk@gmail.com' },
       { image: '', link: '', name: 'alimbaeva' },
       { image: '', link: '', name: 'asel.alimbaeva' },
